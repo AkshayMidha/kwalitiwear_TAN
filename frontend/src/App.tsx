@@ -22,7 +22,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />} />
-
           {/* Private Route */}
           <Route element={<RequireUser allowedRoles={['user', 'admin']} />}>
             <Route path='profile' element={<ProfilePage />} />

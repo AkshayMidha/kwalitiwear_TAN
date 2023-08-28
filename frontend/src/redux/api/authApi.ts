@@ -18,13 +18,11 @@ export const authApi = createApi({
         };
       },
     }),
-    loginUser: builder.mutation<
-      { access_token: string; status: string },
-      LoginInput
-    >({
+    loginUser: builder.mutation<{ access_token: string; status: string },LoginInput>
+      ({
       query(data) {
         return {
-          url: 'auth/login',
+          url: 'user/authenticate',
           method: 'POST',
           body: data,
           credentials: 'include',
